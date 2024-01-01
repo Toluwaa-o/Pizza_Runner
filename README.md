@@ -1,2 +1,3 @@
-# Pizza_Runner
-SQL Queries for the Pizza runner case study in the 8 weeks of SQL challenge series
+# Pizza Runner (8 Week SQL Challenge Queries)
+
+SQL queries for the [8 Week SQL Challenges Case Study 2](https://8weeksqlchallenge.com/case-study-2/)
