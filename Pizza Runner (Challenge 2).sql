@@ -928,3 +928,20 @@ FROM
   JOIN pizza_names pnm ON cus.pizza_id = pnm.pizza_id
 WHERE
   cancellation is null;
+
+--E. Bonus Questions
+--If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen if a new 
+--Supreme pizza with all the toppings was added to the Pizza Runner menu?
+INSERT INTO
+  pizza_names
+VALUES
+  (3, 'Supreme');
+
+-- Add new pizza name and ID
+INSERT INTO
+  pizza_recipes (pizza_id, toppings)
+SELECT
+  3 as pizza_id,
+  STRING_AGG (topping_id, ', ') as toppings -- Add toppings to recipie
+FROM
+  pizza_toppings;
